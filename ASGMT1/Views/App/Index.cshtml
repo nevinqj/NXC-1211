@@ -1,0 +1,16 @@
+﻿@model AppViewModel
+
+<form method="post">
+    <fieldset>
+        <div class="form-group">
+            <label>Enter Text:</label>
+            <input asp-for="UserInput" type="text" class="form-control" id="userInput" placeholder="What's on your mind?">
+        </div>
+        <div class="form-group">
+            <label>Show Text:</label>
+            <input type="text" class="form-control" id="userOutput" value="@ViewBag.UserOutput" readonly>
+        </div>
+        <button asp-controller="App" asp-action="Index" type="submit" class="btn btn-primary">Submit</button>
+    </fieldset>
+</form>
+
